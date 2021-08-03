@@ -1,3 +1,12 @@
 export const primeFactorize = (input: number) : number[] => {
-  return [input]
+  let output: number[] = []
+  let divisor = 2
+  while(input > 1 ){
+    while(input % divisor == 0){
+      output.push(divisor)
+      input = input / divisor
+    }
+    divisor += 1
+  }
+  return output
 }
