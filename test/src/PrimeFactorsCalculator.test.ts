@@ -28,4 +28,9 @@ describe("Prime Factors Calculator Test", () => {
     expect(factors).toStrictEqual([3, 3])
   })
 
+  it("should prime factorize a large complex number", () => {
+    const factors = primeFactorize(2 * 3 * 3 * 19 * 31 * 31)
+    expect(factors).toStrictEqual([2, 3, 3, 19, 31, 31])
+  })
+
 })
